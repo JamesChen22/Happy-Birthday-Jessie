@@ -5,52 +5,93 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Happy Birthday!!! :)</title>
+  <title>生日快乐！</title>
   <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
   <link rel="stylesheet" href="style/style.css">
+  <!-- Materialize CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <style>
+    /* Ensure nav is on top */
+    .nav-wrapper {
+      z-index: 1000;
+    }
+  </style>
+  <style>
+    /* Mocha green accent */
+    .nav-wrapper {
+      background-color: #758E67;
+    }
+    .btn, .btn-large, .btn-small {
+      background-color: #758E67;
+    }
+  </style>
 </head>
 
 <body>
+  <!-- Navigation Bar with Hamburger Button -->
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo center">Jessie's Birthday</a>
+      <ul id="nav-mobile" class="left hide-on-med-and-down">
+        <li><a href="index.html">主页</a></li>
+        <li><a href="timeline.html">时间轴</a></li>
+        <li><a href="photowall.html">照片集</a></li>
+        <li><a href="letter.html">一封信</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Sidenav Structure -->
+  <ul id="slide-out" class="sidenav">
+    <li><a href="timeline.html">Timeline</a></li>
+    <li><a href="photowall.html">Photo Wall</a></li>
+    <li><a href="letter.html">Letter</a></li>
+  </ul>
+
   <div class="container">
     <div class="one">
       <h1 class="one">
-        <span data-node-name="greeting">Hey</span>
-        <span data-node-name="name">Lydia</span>
+        <span data-node-name="greeting">你好</span>
+        <span data-node-name="name">王凯璇!</span>
       </h1>
-      <p class="two" data-node-name="greetingText">I really like your name btw!</p>
+      <p class="two" data-node-name="greetingText">猜猜今天是什么特殊的日子呀</p>
     </div>
     <div class="three">
-      <p data-node-name="text1">It's your birthday!!! :D</p>
+      <p data-node-name="text1">今天是你的生日呀</p>
     </div>
     <div class="four">
       <div class="text-box">
-        <p class="hbd-chatbox" data-node-name="textInChatBox">Happy birthday to you!! Yeee! Many many happy blah...</p>
-        <p class="fake-btn" data-node-name="sendButtonLabel">Send</p>
+        <p class="hbd-chatbox" data-node-name="textInChatBox">
+          生日快乐！新的一年里万事顺利！继续进步
+        </p>
+        <p class="fake-btn" data-node-name="sendButtonLabel">发送</p>
       </div>
     </div>
     <div class="five">
-      <p class="idea-1" data-node-name="text2">That's what I was going to do.</p>
-      <p class="idea-2" data-node-name="text3">But then I stopped.</p>
+      <p class="idea-1" data-node-name="text2">一种正常又无聊的庆祝方式...</p>
+      <p class="idea-2" data-node-name="text3">然后，我想到了一些好东西！</p>
       <p class="idea-3">
-        <span data-node-name="text4">I realised, I wanted to do something</span>
-        <strong data-node-name="text4Adjective">special</strong>.</p>
-      <p class="idea-4" data-node-name="text5Entry">Because,</p>
+        <span data-node-name="text4">我想做些特别的东西，</span>
+        <strong data-node-name="text4Adjective">有惊喜的那种！</strong>.
+      </p>
+      <p class="idea-4" data-node-name="text5Entry">因为</p>
       <p class="idea-5">
-        <span data-node-name="text5Content">You are Special</span>
+        <span data-node-name="text5Content">你在我生活中是很有惊喜，很特别的存在！</span>
         <span class="smiley" data-node-name="smiley">:)</span>
       </p>
       <p class="idea-6">
-        <span data-node-name="bigTextPart1">S</span>
-        <span data-node-name="bigTextPart2">O</span>
+        <span data-node-name="bigTextPart1">所</span>
+        <span data-node-name="bigTextPart2">以</span>
       </p>
     </div>
     <div class="six">
-      <img src="img/lydia2.png" alt="" class="lydia-dp" data-node-name="imagePath">
+      <img src="img/jessie2.png" alt="" class="lydia-dp" data-node-name="imagePath">
       <img src="img/hat.svg" alt="" class="hat">
       <div class="wish">
-        <h3 class="wish-hbd" data-node-name="wishHeading">Happy Birthday!</h3>
-        <h5 data-node-name="wishText">May the js.prototypes always be with you! ;)</h5>
+        <h3 class="wish-hbd" data-node-name="wishHeading">生日快乐</h3>
+        <h5 data-node-name="wishText">祝愿你在未来每天都有我的陪伴，开开心心！</h5>
       </div>
     </div>
     <div class="seven">
@@ -120,14 +161,27 @@
       </svg>
     </div>
     <div class="nine">
-      <p data-node-name="outroText">Okay, now come back and tell me if you liked it.</p>
-      <p id="replay" data-node-name="replayText">Or click, if you want to watch it again.</p>
+      <p data-node-name="outroText">接下来，看看我们一路的历程吧～</p>
+      <p id="replay" data-node-name="replayText">我们真的好特别好特别呀</p>
       <p class="last-smile" data-node-name="outroSmiley">:)</p>
+      <!-- Button now inside the same container as the last text 
+      <div class="center-align" style="margin-top: 20px;">
+        <a class="btn" href="timeline.html">View Timeline</a>
+      </div> -->
     </div>
   </div>
-</body>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
-<script type="application/javascript" src="script/main.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+  <!-- Materialize JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script>
+    // Initialize the sidenav
+    document.addEventListener('DOMContentLoaded', function() {
+      var elems = document.querySelectorAll('.sidenav');
+      M.Sidenav.init(elems);
+    });
+  </script>
+  <script type="application/javascript" src="script/main.js"></script>
+</body>
 
 </html>
