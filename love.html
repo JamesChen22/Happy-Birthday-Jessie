@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Love</title>
+  <!-- Materialize CSS & Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <style>
+    /* Full-page layout, center content */
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+      position: relative;
+      background-color: #fff;
+    }
+    /* Return Button (top-left) */
+    .back-btn {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      z-index: 1000;
+    }
+    /* Heart Container: Using a grid with 10 columns (more pixels!) */
+    .heart {
+      display: grid;
+      grid-template-columns: repeat(10, 20px);
+      grid-gap: 2px;
+      margin-top: 50px;
+    }
+    /* Pixel styling */
+    .pixel {
+      width: 20px;
+      height: 20px;
+      background-color: red;
+      opacity: 0; /* hidden until animated */
+    }
+    /* Empty cells */
+    .empty {
+      width: 20px;
+      height: 20px;
+      opacity: 0;
+    }
+    /* Discovery text container */
+    .discovery {
+      margin-top: 30px;
+      font-size: 1.2em;
+      font-family: 'Work Sans', sans-serif;
+    }
+    .discovery span {
+      opacity: 0; /* hidden until animated */
+      margin-right: 5px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Return Button to letter.html -->
+  <a class="btn-small back-btn" href="letter.html">
+    <i class="material-icons">arrow_back</i>
+  </a>
+
+  <!-- Higher Resolution Pixel Heart -->
+  <!-- Grid: 8 rows x 10 columns -->
+  <div class="heart">
+
+    <!-- Row 1: Pattern: 0,1,1,1,1,1,1,1,0,0 -->
+    <div class="empty"></div>
+    <div class="empty"></div>
+    <div class="empty"></div>
+    <div class="empty"></div>
+    <div class="empty"></div>
+    <div class="empty"></div>
+    <div class="empty"></div>
+    <div class="empty"></div>
+    <div class="empty"></div>
+    <div class="empty"></div>
+
+    <!-- Row 1: Pattern: 0,1,1,1,1,1,1,1,0,0 -->
+    <div class="empty"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="empty"></div>
+    <div class="empty"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="empty"></div>
+
+    <!-- Row 2: Pattern: 1,1,1,1,0,0,1,1,1,1 -->
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+
+    <!-- Row 3: Pattern: 1,1,1,1,1,1,1,1,1,1 -->
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+
+    <!-- Row 4: Pattern: 1,1,1,1,1,1,1,1,1,1 -->
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+
+    <!-- Row 5: Pattern: 0,1,1,1,1,1,1,1,1,0 -->
+    <div class="empty"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="empty"></div>
+
+    <!-- Row 6: Pattern: 0,0,1,1,1,1,1,1,0,0 -->
+    <div class="empty"></div>
+    <div class="empty"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="empty"></div>
+    <div class="empty"></div>
+
+    <!-- Row 7: Pattern: 0,0,0,1,1,1,1,0,0,0 -->
+    <div class="empty"></div>
+    <div class="empty"></div>
+    <div class="empty"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="empty"></div>
+    <div class="empty"></div>
+    <div class="empty"></div>
+
+    <!-- Row 8: Pattern: 0,0,0,0,1,1,0,0,0,0 -->
+    <div class="empty"></div>
+    <div class="empty"></div>
+    <div class="empty"></div>
+    <div class="empty"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="empty"></div>
+    <div class="empty"></div>
+    <div class="empty"></div>
+    <div class="empty"></div>
+  </div>
+
+  <!-- Discovery Text: Appearing word by word -->
+  <div class="discovery">
+    <span>Yay!</span>
+    <span>You</span>
+    <span>discovered</span>
+    <span>this!</span>
+    <span>Love</span>
+    <span>you</span>
+    <span>forever!</span>
+  </div>
+
+  <!-- GSAP for Animations -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+  <!-- Materialize JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script>
+    // Animate the heart pixels: stagger fade-in effect for all pixels
+    TweenMax.staggerTo(document.querySelectorAll('.pixel'), 0.5, { opacity: 1 }, 0.1);
+
+    // Animate discovery text word by word
+    TweenMax.staggerTo(document.querySelectorAll('.discovery span'), 0.5, { opacity: 1 }, 0.3);
+  </script>
+</body>
+</html>
